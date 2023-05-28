@@ -2,7 +2,6 @@
 using System.IO;
 using UnityEngine;
 using System.Linq;
-using UnityEngine.UI;
 using Newtonsoft.Json;
 using deDialogue.Services;
 using System.Collections.Generic;
@@ -17,9 +16,8 @@ namespace deDialogue
         
         public static DialogueController Instance { get; private set; }
 
-        [field: SerializeField] public TextDisplayer TextDisplayer { get; private set; }
-        [field: SerializeField] public PortraitController Portrait { get; private set; }
-        [field: SerializeField] public Image Flash { get; private set; }
+        public TextPresenter TextPresenter;
+        public PortraitController Portrait;
 
         public bool OnDialogue => _onDialogue;
 
@@ -91,7 +89,7 @@ namespace deDialogue
             _eventHandler.Handle(currentLine.Event);
             _effectHandler.Handle(currentLine.EffectID);
 
-            TextDisplayer.ShowBox(currentLine.Text);
+            TextPresenter.ShowBox(currentLine.Text);
             Portrait.Show(currentLine.PortraitID);
         }
 
@@ -113,13 +111,13 @@ namespace deDialogue
 
         private void NextLine()
         {
-            TextDisplayer.Clear();
+            TextPresenter.Clear();
             _lineFinished = false;
 
             _line++;
             if (_line >= _data.Lines.Length)
             {
-                TextDisplayer.HideBox();
+                TextPresenter.HideBox();
                 Portrait.Hide();
                 
                 OnDialogueFinished.Invoke();
@@ -132,7 +130,7 @@ namespace deDialogue
             _eventHandler.Handle(currentLine.Event);
             _effectHandler.Handle(currentLine.EffectID);
             
-            TextDisplayer.Print(currentLine.Text);
+            TextPresenter.Print(currentLine.Text);
             Portrait.Show(currentLine.PortraitID);
         }
 

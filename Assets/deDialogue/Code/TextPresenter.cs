@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace deDialogue
 {
-    public class TextDisplayer : MonoBehaviour
+    public class TextPresenter : MonoBehaviour
     {
         public RectTransform Box;
         public Text DialogueBox;
