@@ -1,0 +1,58 @@
+[
+    {
+        "ID":-1,
+        "Lines":
+        [   
+            {
+                "PortraitID":"-1",
+                "EffectID":0,
+                "Text":"This is a test dialogue, you shouldn't be seeing this, you know..."
+            },
+            {
+                "PortraitID":"-2",
+                "EffectID":1,
+                "Text":"I told you to leave already!"
+            },
+            {
+                "PortraitID":"sonic",
+                "EffectID":0,
+                "Text":"Alright then..."
+            },
+            {
+                "PortraitID":"sonic",
+                "EffectID":2,
+                "Text":"SONIC SPEED!"
+            },
+            {
+                "PortraitID":"-3",
+                "EffectID":1,
+                "Text":"Hey, wait!"
+            },
+            {
+                "PortraitID":"-4",
+                "EffectID":0,
+                "Text":"He didn't even tell me his name..."
+            }
+        ]
+    },
+    {
+        "ID":0,
+        "Lines":
+        [
+            {
+                "PortraitID":"0",
+                "Text":"A wandering soul stuck in Purgatory..."
+            },
+            {
+                "PortraitID":"0",
+                "Event":1,
+                "Text":"Found itself a body!"
+            },
+            {
+                "PortraitID":"0",
+                "Event":1,
+                "Text":"Now go make your way out of here."
+            },
+        ]
+    }
+]
